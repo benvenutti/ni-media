@@ -43,6 +43,23 @@ matrix:
 
       env: MATRIX_EVAL="CONFIG=Coverage && CXX=g++-5 && GCOV=gcov-5 && RUN_PCM_TESTS=OFF"
 
+    - os: linux
+      compiler: clang
+      addons:
+        apt:
+          sources:
+          - ubuntu-toolchain-r-test
+          - llvm-toolchain-trusty-5.0
+          packages:
+          - clang-5.0
+          - libstdc++-6-dev
+          - cmake
+          - libogg-dev
+          - libvorbis-dev
+          - libflac++-dev
+
+      env: MATRIX_EVAL="CONFIG=Release && CXX=clang++-5.0 && RUN_PCM_TESTS=ON"
+
 before_install:
   - eval "${MATRIX_EVAL}"
   - mkdir deps && cd deps
