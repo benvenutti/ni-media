@@ -23,9 +23,9 @@ matrix:
           sources:
           - ubuntu-toolchain-r-test
           packages:
-          - g++-5
+          - g++-6
 
-      env: MATRIX_EVAL="CONFIG=Release && CXX=g++-5 && RUN_PCM_TESTS=ON"
+      env: MATRIX_EVAL="CONFIG=Release && CXX=g++-6 && RUN_PCM_TESTS=ON"
 
     - os: linux
       compiler: gcc
@@ -34,10 +34,10 @@ matrix:
           sources:
           - ubuntu-toolchain-r-test
           packages:
-          - g++-5
+          - g++-6
           - lcov
 
-      env: MATRIX_EVAL="CONFIG=Coverage && CXX=g++-5 && GCOV=gcov-5 && RUN_PCM_TESTS=OFF"
+      env: MATRIX_EVAL="CONFIG=Coverage && CXX=g++-6 && GCOV=gcov-6 && RUN_PCM_TESTS=OFF"
 
 before_install:
   - eval "${MATRIX_EVAL}"
