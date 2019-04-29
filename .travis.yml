@@ -49,18 +49,18 @@ install:
   - cd vcpkg
   - ./bootstrap-vcpkg.sh
   - echo -e '\nset(VCPKG_BUILD_TYPE release)' >> ./triplets/${VCPKG_TRIPLET}.cmake
-  - ./vcpkg install boost-algorithm:custom-triplet
-  - ./vcpkg install boost-endian:custom-triplet
-  - ./vcpkg install boost-filesystem:custom-triplet
-  - ./vcpkg install boost-format:custom-triplet
-  - ./vcpkg install boost-icl:custom-triplet
-  - ./vcpkg install boost-iostreams:custom-triplet
-  - ./vcpkg install boost-program-options:custom-triplet
-  - ./vcpkg install boost-system:custom-triplet
-  - ./vcpkg install gtest:custom-triplet
-  - ./vcpkg install libOgg:custom-triplet
-  - ./vcpkg install libFlac:custom-triplet
-  - ./vcpkg install libVorbis:custom-triplet
+  - ./vcpkg install boost-algorithm
+  - ./vcpkg install boost-endian
+  - ./vcpkg install boost-filesystem
+  - ./vcpkg install boost-format
+  - ./vcpkg install boost-icl
+  - ./vcpkg install boost-iostreams
+  - ./vcpkg install boost-program-options
+  - ./vcpkg install boost-system
+  - ./vcpkg install gtest
+  - ./vcpkg install libOgg
+  - ./vcpkg install libFlac
+  - ./vcpkg install libVorbis
 
 before_script:
   - cd $TRAVIS_BUILD_DIR
