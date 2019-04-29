@@ -43,9 +43,10 @@ before_install:
   - eval "${MATRIX_EVAL}"
 
 install:
-  - mkdir -p ${DEPS_DIR}/vcpkg
-  - cd ${DEPS_DIR}/vcpkg
+  - mkdir -p ${DEPS_DIR}
+  - cd ${DEPS_DIR}
   - git clone https://github.com/Microsoft/vcpkg.git
+  - cd vcpkg
   - ./bootstrap-vcpkg.sh
   - echo -e '\nset(VCPKG_BUILD_TYPE release)' >> ./triplets/${VCPKG_TRIPLET}.cmake
   - ./vcpkg install boost-algorithm:custom-triplet
